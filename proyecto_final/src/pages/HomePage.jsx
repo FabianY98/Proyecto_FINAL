@@ -1,14 +1,18 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const HomePage = () => {
-  return (
-    <div>
-        <Link to="/Users">Ir a Users</Link>
-        <Link to="/Posts">Ir a Publicaciones</Link>
-        <Link to="/Comments">Ir a Comentarios</Link>
-        <Link to="/Albums">Ir a Albumes</Link>
-        <Link to="/Photos">Ir a Fotos</Link>
-        <Link to="/Todos">Ir a Listas</Link>
-    </div>
-  );
+	return (
+		<div className="centered-layout">
+			<h1> Proyecto Final Frontend React Idat - Consumo de API JSONPlaceHolder </h1>
+			<div className="resource-links">
+				<NavLink to="/post">Ver Post</NavLink>
+				<NavLink to="/comments">Ver Comentarios</NavLink>
+				<NavLink to="/albums">Ver Albumes</NavLink>
+				<NavLink to="/photos">Ver Fotos</NavLink>
+				<NavLink to="/todos">Ver Todos</NavLink>
+				<NavLink to="/users">Ver Usuarios</NavLink>
+			</div>
+		</div>
+	);
 };
+export default HomePage;
