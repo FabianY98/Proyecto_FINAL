@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+// import React from 'react';
+// import { BrowserRouter as Routes, Route, Switch, Routes } from 'react-router-dom';
+// import HomePage from './pages/HomePage';
+// import Posts from './pages/Posts'
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { HomePage } from './pages/HomePage';
+import { Users } from './pages/Users';
+import { Posts } from './pages/Posts';
+import { Comments } from './pages/Comments';
+import { Albums } from './pages/Albums';
+import { Photos } from './pages/Photos';
+import { Todos } from './pages/Todos';
+import { NotFoundPage } from './pages/NotFoundPage';
+export default function App() {
+	return (
+		<Routes>
+			<Route path="/" exact={true} element={<HomePage />} />
+			<Route path="/users" exact={true} element={<Users />} />
+			<Route path="/post" exact={true} element={<Posts />} />
+			<Route path="/comments" exact={true} element={<Comments />} />
+			<Route path="/albums" exact={true} element={<Albums />} />
+			<Route path="/photos" exact={true} element={<Photos />} />
+			<Route path="/todos" exact={true} element={<Todos />} />
+			<Route path="/*" exact={true} element={<NotFoundPage />} />
+		</Routes>
+	);
 }
-
-export default App
