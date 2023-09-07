@@ -25,13 +25,13 @@ export const Photos = () => {
 	}, []);
 
 	return (
-		<div>
+		<div className="box">
 			<h2>Fotos</h2>
-			<ul>
+			<ul className="grid-layout">
 				{photos.map((photo) => (
-					<li key={photo.id}>
+					<li className="rounded-container" key={photo.id}>
 						<img src={photo.thumbnailUrl} alt={photo.title} />
-						<p>{photo.title}</p>
+						<p className="floating-text">{photo.title}</p>
 					</li>
 				))}
 			</ul>
