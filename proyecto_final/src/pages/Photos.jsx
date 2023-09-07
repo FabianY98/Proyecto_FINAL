@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import { JsonPlaceHolderData} from '../components/JsonPlaceHolderData';
-
-export const Photos = () => {
-  return (
-    <div>
-        <JsonPlaceHolderData.Photos />
-    </div>
-  );
-};
-=======
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -40,4 +29,3 @@ export const Photos = () => {
 };
 
 export default Photos;
->>>>>>> fab.dev
